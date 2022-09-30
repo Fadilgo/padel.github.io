@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="tugas1.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">WEBSITE~KYUN</a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li><a href="#" class="active">home</a></li>
+        <li><a href="#">home</a></li>
+        <li><a href="#">home</a></li>
+        <li><a href="#">home</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars" />
+      <img src="moon.png" id="moon" />
+      <h2 id="text">PADIL WEB</h2>
+      <img src="rock.png" id="rock" />
+      <img src="masjid.png" id="masjid" />
+      <img src="bottom.png" id="bottom" />
+      <img src="lamp.png" id="lampu" />
+    </section>
+    <div class="sec"></div>
+    <script type="text/javascript">
+      const toggleMenu = document.querySelector(".toggle");
+      const navigation = document.querySelector(".navigation");
+      toggleMenu.oneclick = function () {
+        toggleMenu.classList.toggle("active");
+        navigation.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

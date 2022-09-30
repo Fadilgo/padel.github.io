@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(#8b016a, #6f1159);
+  overflow-x: hidden;
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+#header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+#header .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .navigation li {
+  list-style: none;
+  margin-left: 20px;
+}
+#header .navigation li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 30px;
+}
+#header .navigation li a:hover,
+#header .navigation li a.active {
+  background: #fff;
+  color: #111;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+section img#lampu {
+  mix-blend-mode: screen;
+}
+section img#masjid {
+  transform: translateY(-20px);
+}
+section img#stars2 {
+  display: none;
+}
+#text {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  transform: translatey(-50%);
+  color: #fff;
+  font-size: 10vw;
+  white-space: nowrap;
+  text-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+.sec {
+  position: relative;
+  padding: 100px;
+  background: #96283a;
+}
+.sec h2 {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.sec p {
+  font-size: 5vh;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 40px;
+}
+.kotak {
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+}
+.kotak1 {
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+}
+.anime {
+  padding-top: 50px;
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+}
+.anime h1 {
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.anime img {
+  height: 65vh;
+  width: auto;
+  margin: 30px;
+}
+.anime .isianime {
+  position: relative;
+  display: block;
+}
+.anime p {
+  font-size: 20px;
+  margin: 20px;
+}
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.75);
+  margin: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent, transparent, transparent, #ff00d0);
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+  animation: animate 4s linear infinite;
+}
+.box img {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box span {
+  position: absolute;
+  inset: 5px;
+  background: #0c1022;
+  border-radius: 20px;
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  #header {
+    padding: 20px;
+  }
+  #header .logo {
+    font-size: 1.5em;
+  }
+  #header .navigation {
+    display: none;
+  }
+  #header .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #6f1159;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 100000;
+  }
+  .toggle.active {
+    background: url(close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  section img#stars2 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  section img#masjid {
+    transform: translateY(-5px);
+  }
+  #text {
+    font-size: 8vh;
+  }
+  .sec {
+    padding: 40px;
+    letter-spacing: 4px;
+  }
+  .sec h2 {
+    font-size: 6vh;
+  }
+  p {
+    margin-top: 30px;
+  }
+  .anime {
+    display: block;
+    margin-top: 5px;
+    padding: 2px;
+  }
+  .anime img {
+    width: auto;
+    height: 22vh;
+    align-items: center;
+    background-attachment: fixed;
+    padding: 0;
+  }
+  .anime p {
+    font-size: 17px;
+  }
+  .kotak {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+a {
+  position: relative;
+  display: inline-block;
+  padding: 12px 60px;
+  color: #b6c2cb;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-decoration: none;
+  font-size: 25px;
+  overflow: hidden;
+  transition: 0.5s;
+  font-weight: 700;
+}
+a:hover {
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1.2s;
+  font-weight: 900;
+}
+a span {
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2196f3);
+}
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #2196f3);
+}
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+.konta {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  background: #031321;
+  font-family: "consolas";
+}
+.konta h1 {
+  margin-right: 50px;
+  color: #fff;
+  font-size: 50px;
+}

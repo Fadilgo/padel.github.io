@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+}
+.maria {
+  max-width: 100%;
+  margin: auto;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.card {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background: #182747;
+  border-radius: 20px;
+  box-shadow: 0 50px 100px rgb(13, 26, 68);
+  transition: 0.5s;
+}
+.card:hover {
+  height: 450px;
+}
+.img8x {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: none;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  left: 90px;
+  top: -50px;
+  transition: 0.5s;
+}
+.card:hover .img8x {
+  width: 250px;
+  height: 250px;
+}
+.img8x img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.card .content {
+  font-family: "Noto Serif Georgian", serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.card .content .detail {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s;
+  transform: translateY(140px);
+}
+.card:hover .content .detail {
+  transform: translateY(0px);
+}
+.card .content .detail h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: rgb(155, 214, 211);
+  line-height: 1.25em;
+}
+.card .content .detail h2 span {
+  font-size: 0.75em;
+  font-weight: 500;
+  opacity: 0.5;
+}
+.data {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.data h3 {
+  font-size: 1em;
+  color: rgba(227, 223, 223, 0.501);
+  line-height: 1.5em;
+  font-weight: 600;
+  font-size: 25px;
+}
+.data h3 span {
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.6;
+}
